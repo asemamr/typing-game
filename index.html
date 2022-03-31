@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&family=Cairo&family=Open+Sans:ital@1&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/all.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="game">
+    <div class="name">Typing Speed Test
+      <div class="settings">
+        <i class="fa-duotone fa-gear"></i>
+        <div class="select">
+          <h6>The default level</h6>
+          <select name="levels" id="" class="levels">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+          </select>
+          <h6>The number of words</h6>
+          <select name="words-number" id="" class="words-number">
+            <option value="20">20 Words</option>
+            <option value="30" selected>30 Words</option>
+            <option value="35">35 Words</option>
+            <option value="60">60 Words</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="message">You playing on <span class="lvls"></span> level & you have <span class="seconds"></span> seconds to type the word</div>
+      <div class="start">Start Playing</div>
+      <div class="the-word"></div>
+      <input type="text" class="input">
+      <div class="upcoming-words"></div>
+      <div class="control">
+        <div class="time">Time left: <span class="seconds"></span> seconds</div>
+        <div class="score">score: <span class="got">0</span> from <span class="total"></span></div>
+      </div>
+      <div class="finish">
+        <div class="finish-score">score: <span class="finish-got">0</span> from <span class="finish-total"></span></div>
+        <button>Retry</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

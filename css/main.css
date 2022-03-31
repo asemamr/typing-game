@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: #2196f3;
+  --secondary-color: #009688;
+}
+body {
+  font-family: sans-serif;
+}
+.game {
+  background-color: #eee;
+  height: 100vh;
+  text-align: center;
+}
+.game .name {
+  background-color: var(--main-color);
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+}
+.settings i {
+  color: white;
+  position: fixed;
+  left: 120px;
+  top: 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.settings i:hover {
+  color: rgb(216, 216, 216);
+}
+.select {
+  position: absolute;
+  top: 60px;
+  /* display: flex; */
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  z-index: 10;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color);
+  display: none;
+  user-select: none;
+}
+.game .container {
+  width: 600px;
+  margin: 10px auto 0;
+  position: relative;
+}
+.message {
+  background-color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 5px;
+}
+.message span {
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+.message span::before {
+  content: "[ ";
+}
+.message span::after {
+  content: " ]";
+}
+.start {
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.the-word {
+  font-size: 40px;
+  color: var(--main-color);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  user-select: none;
+}
+.input {
+  width: 100%;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+.input:focus {
+  outline: none;
+}
+.upcoming-words {
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+.upcoming-words div {
+  background-color: var(--main-color);
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.control {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+
+}
+.control span,
+.finish span {
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+.winner {
+  color: var(--main-color);
+  font-size: 40px;
+}
+.looser {
+  color: red;
+  font-size: 30px;
+}
+.finish {
+  background-color: white;
+  width: 400px;
+  padding: 30px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: 0.5s ease;
+}
+.finish button{
+  border: none;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+
+@keyframes visible {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
